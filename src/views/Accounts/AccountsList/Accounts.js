@@ -4,6 +4,7 @@ import { Badge, Card, CardBody, CardHeader, Col, Pagination, PaginationItem, Pag
 
 const mockAccounts = [
   {
+    id: 0,
     name: 'Main',
     group: '',
     category: '',
@@ -11,6 +12,7 @@ const mockAccounts = [
     balance: 5476.10,
   },
   {
+    id: 1,
     name: 'House stuff',
     group: 'house',
     category: 'living expenses',
@@ -18,6 +20,7 @@ const mockAccounts = [
     balance: 290.06,
   },
   {
+    id: 2,
     name: 'Party fund',
     group: '',
     category: 'entertainment',
