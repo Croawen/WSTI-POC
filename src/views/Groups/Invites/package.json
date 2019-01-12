@@ -1,0 +1,6 @@
+{
+  "name": "Invites",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Invites.js"
+}
