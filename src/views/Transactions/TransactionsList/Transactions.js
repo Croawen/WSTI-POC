@@ -8,21 +8,21 @@ const mockAccounts = [
     group: '',
     category: '',
     currency: 'USD',
-    ballance: 5476.10,
+    balance: 5476.10,
   },
   {
     name: 'House stuff',
     group: 'house',
     category: 'living expenses',
     currency: 'USD',
-    ballance: 290.06,
+    balance: 290.06,
   },
   {
     name: 'Party fund',
     group: '',
     category: 'entertainment',
     currency: 'USD',
-    ballance: -135.50,
+    balance: -135.50,
   },
 ];
 
@@ -44,7 +44,7 @@ class Transactions extends Component {
                       <th>Group</th>
                       <th>Category</th>
                       <th>Currency</th>
-                      <th>Ballance</th>
+                      <th>Balance</th>
                       <th></th>
                     </tr>
                   </thead>
@@ -56,7 +56,7 @@ class Transactions extends Component {
                           <td>{acc.group}</td>
                           <td>{acc.category}</td>
                           <td>{acc.currency}</td>
-                          <td>{acc.ballance}</td>
+                          <td>{acc.balance}</td>
                           <td>
                           <Link to={`/accounts/${acc.id}`}>
                             <Badge color="success">Edit</Badge>
