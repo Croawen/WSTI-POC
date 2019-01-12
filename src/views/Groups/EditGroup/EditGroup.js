@@ -80,8 +80,8 @@ class EditGroup extends Component {
                   </Col>
                   <Col xs="4" sm="4">
                     <FormGroup>
-                      <Label htmlFor="initial-ballance">Initial ballance</Label>
-                      <Input type="number" id="initial-ballance" placeholder="0" />
+                      <Label htmlFor="initial-balance">Initial balance</Label>
+                      <Input type="number" id="initial-balance" placeholder="0" />
                     </FormGroup>
                   </Col>
                 </FormGroup> */}
