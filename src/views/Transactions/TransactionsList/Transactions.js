@@ -2,27 +2,18 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Badge, Card, CardBody, CardHeader, Col, Pagination, PaginationItem, PaginationLink, Row, Table } from 'reactstrap';
 
-const mockAccounts = [
+
+const mockTransactions = [
   {
-    name: 'Main',
-    group: '',
+    id: 0,
+    source: 'Main',
+    target: 'Party fund',
+    type: 'TRANSFER',
+    amount: 50,
+    description: 'Sending cash',
+    date: (new Date()).toDateString(),
+    status: 'Complete',
     category: '',
-    currency: 'USD',
-    balance: 5476.10,
-  },
-  {
-    name: 'House stuff',
-    group: 'house',
-    category: 'living expenses',
-    currency: 'USD',
-    balance: 290.06,
-  },
-  {
-    name: 'Party fund',
-    group: '',
-    category: 'entertainment',
-    currency: 'USD',
-    balance: -135.50,
   },
 ];
 
@@ -34,38 +25,40 @@ class Transactions extends Component {
           <Col xs="12" lg="12">
             <Card>
               <CardHeader>
-                <i className="fa fa-align-justify"></i> Your accounts
+                <i className="fa fa-align-justify"></i> Transaction History
               </CardHeader>
               <CardBody>
                 <Table responsive striped>
                   <thead>
                     <tr>
-                      <th>Name</th>
-                      <th>Group</th>
+                      <th>Source Account</th>
+                      <th>Target Account</th>
+                      <th>Transaction Type</th>
+                      <th>Amount</th>
+                      <th>Description</th>
+                      <th>Date</th>
+                      <th>Transaction Status</th>
                       <th>Category</th>
-                      <th>Currency</th>
-                      <th>Balance</th>
-                      <th></th>
                     </tr>
                   </thead>
                   <tbody>
-                    {mockAccounts.map(acc => {
+                    {mockTransactions.map(t => {
                       return (
                         <tr>
-                          <td>{acc.name}</td>
-                          <td>{acc.group}</td>
-                          <td>{acc.category}</td>
-                          <td>{acc.currency}</td>
-                          <td>{acc.balance}</td>
-                          <td>
-                          <Link to={`/accounts/${acc.id}`}>
-                            <Badge color="success">Edit</Badge>
-                          </Link>
-                          </td>
+                          <td>{t.source}</td>
+                          <td>{t.target}</td>
+                          <td>{t.type}</td>
+                          <td>{t.amount}</td>
+                          <td>{t.description}</td>
+                          <td>{t.date}</td>
+                          <td>{t.status}</td>
+                          <td>{t.category}</td>
                         </tr>
                       )
                     })}
                   </tbody>
+
+
                 </Table>
                 <Pagination>
                   <PaginationItem disabled><PaginationLink previous tag="button">Prev</PaginationLink></PaginationItem>
