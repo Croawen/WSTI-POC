@@ -25,12 +25,6 @@ import {
   Row,
 } from 'reactstrap';
 
-const accountDetails = {
-  name: 'Party fund',
-  category: 0,
-  group: 0,
-}
-
 class EditGroup extends Component {
   render() {
     return (
@@ -44,27 +38,7 @@ class EditGroup extends Component {
               <CardBody>
                 <FormGroup>
                   <Label htmlFor="name">Name</Label>
-                  <Input type="text" id="name" value={accountDetails.name} placeholder="Enter account name" />
-                </FormGroup>
-
-                <FormGroup row className="my-0">
-                  <Col xs="4" sm="4">
-                    <FormGroup>
-                      <Label htmlFor="category">Category</Label>
-                      <Input type="select" name="category" id="category">
-                        <option value="0" selected>house expenses</option>
-                        <option value="1">entertainment</option>
-                      </Input>
-                    </FormGroup>
-                  </Col>
-                  <Col xs="8" sm="8">
-                    <FormGroup>
-                      <Label htmlFor="group">Group</Label>
-                      <Input type="select" name="group" id="group">
-                        <option value="0" selected>Fancy group name</option>
-                      </Input>
-                    </FormGroup>
-                  </Col>
+                  <Input type="text" id="name" value="Fancy group name" placeholder="Enter group name" />
                 </FormGroup>
 
                 {/* <FormGroup row className="my-0">
@@ -89,7 +63,6 @@ class EditGroup extends Component {
               </CardBody>
               <CardFooter>
                 <Button type="submit" size="sm" color="primary"><i className="fa fa-dot-circle-o"></i> Save</Button>
-                <Button type="submit" size="sm" color="danger"><i className="fa fa-ban"></i> Delete</Button>
               </CardFooter>
             </Card>
           </Col>
