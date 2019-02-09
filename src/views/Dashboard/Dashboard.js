@@ -1,4 +1,4 @@
-import React, { Component, lazy, Suspense } from 'react';
+import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
 import {
   Button,
@@ -130,7 +130,7 @@ const mainChart = {
       data: getNumericData(30, 150, 200),
     },
     {
-      label: 'Partey fund',
+      label: 'Party fund',
       backgroundColor: 'transparent',
       borderColor: brandDanger,
       pointHoverBackgroundColor: '#fff',
@@ -228,7 +228,7 @@ const mockTransactions = [
     description: 'Sending cash',
     date: (new Date()).toDateString(),
     status: 'Complete',
-    category: 'Somee cateogry',
+    category: 'Some cateogry',
   },
 ];
 
