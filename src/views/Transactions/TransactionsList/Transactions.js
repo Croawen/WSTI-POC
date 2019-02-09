@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { Badge, Card, CardBody, CardHeader, Col, Pagination, PaginationItem, PaginationLink, Row, Table } from 'reactstrap';
+import { Card, CardBody, CardHeader, Col, Pagination, PaginationItem, PaginationLink, Row, Table } from 'reactstrap';
+
 
 
 const mockTransactions = [
@@ -14,6 +14,39 @@ const mockTransactions = [
     date: (new Date()).toDateString(),
     status: 'Complete',
     category: '',
+  },
+  {
+    id: 1,
+    source: 'Main',
+    target: 'Party fund',
+    type: 'TRANSFER',
+    amount: 50,
+    description: 'Time to partey',
+    date: (new Date()).toDateString(),
+    status: 'Pending',
+    category: '',
+  },
+  {
+    id: 2,
+    source: 'Partey fund',
+    target: 'Main',
+    type: 'TRANSFER',
+    amount: 100,
+    description: 'No more partey',
+    date: (new Date()).toDateString(),
+    status: 'Complete',
+    category: 'Partey',
+  },
+  {
+    id: 3,
+    source: 'Main',
+    target: 'House fund',
+    type: 'TRANSFER',
+    amount: 999,
+    description: 'Sending cash',
+    date: (new Date()).toDateString(),
+    status: 'Complete',
+    category: 'Somee cateogry',
   },
 ];
 
