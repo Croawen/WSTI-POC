@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardBody, CardHeader, Col, Pagination, PaginationItem, PaginationLink, Row, Table } from 'reactstrap';
+import { Card, FormGroup, Label, Input, CardBody, CardHeader, Col, Pagination, PaginationItem, PaginationLink, Row, Table } from 'reactstrap';
 
 
 
@@ -55,6 +55,12 @@ class Transactions extends Component {
     return (
       <div className="animated fadeIn">
         <Row>
+        <Col xs="12" lg="4">
+              <FormGroup>
+                      <Label htmlFor="search">Search</Label>
+                      <Input type="text" name="search" id="search" />
+                    </FormGroup>
+                    </Col>
           <Col xs="12" lg="12">
             <Card>
               <CardHeader>
