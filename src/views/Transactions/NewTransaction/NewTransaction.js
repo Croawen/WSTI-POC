@@ -48,6 +48,21 @@ class NewTransaction extends Component {
                       </Input>
                     </FormGroup>
                   </Col>
+                  <Col xs="4" sm="8">
+                    <FormGroup>
+                      <Label htmlFor="desc">Description</Label>
+                      <Input type="text" name="desc" id="desc" />
+                    </FormGroup>
+                  </Col>
+                  <Col xs="4" sm="4">
+                    <FormGroup>
+                      <Label htmlFor="to">Category</Label>
+                      <Input type="select" name="to" id="to">
+                        <option value="0">Cat1</option>
+                        <option value="1">Cat2</option>
+                      </Input>
+                    </FormGroup>
+                  </Col>
                 </FormGroup>
               </CardBody>
               <CardFooter>
@@ -65,7 +80,7 @@ class NewTransaction extends Component {
               </CardHeader>
               <CardBody>
                 <FormGroup row className="my-0">
-                  <Col xs="4" sm="4">
+                  <Col xs="4" sm="6">
                     <FormGroup>
                       <Label htmlFor="from2">From</Label>
                       <Input type="select" name="from2" id="from2">
@@ -74,16 +89,17 @@ class NewTransaction extends Component {
                       </Input>
                     </FormGroup>
                   </Col>
-                  <Col xs="4" sm="4">
+                  <Col xs="4" sm="6">
                     <FormGroup>
                       <Label htmlFor="amount2">Amount</Label>
                       <Input type="number" value="0" name="amount2" id="amount2" />
                     </FormGroup>
                   </Col>
+                  
                 </FormGroup>
 
                 <FormGroup row className="my-0">
-                  <Col xs="4" sm="4">
+                  <Col xs="4" sm="6">
                     <FormGroup>
                       <Label htmlFor="group">Select group</Label>
                       <Input type="select" name="group" id="group">
@@ -96,6 +112,21 @@ class NewTransaction extends Component {
                       <Label htmlFor="account">Select account</Label>
                       <Input type="select" name="account" id="account">
                         <option value="0">Main</option>
+                      </Input>
+                    </FormGroup>
+                  </Col>
+                  <Col xs="4" sm="8">
+                    <FormGroup>
+                      <Label htmlFor="desc">Description</Label>
+                      <Input type="text" name="desc" id="desc" />
+                    </FormGroup>
+                  </Col>
+                  <Col xs="4" sm="4">
+                    <FormGroup>
+                      <Label htmlFor="to">Category</Label>
+                      <Input type="select" name="to" id="to">
+                        <option value="0">Cat1</option>
+                        <option value="1">Cat2</option>
                       </Input>
                     </FormGroup>
                   </Col>
