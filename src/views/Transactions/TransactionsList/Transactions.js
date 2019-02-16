@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, FormGroup, Label, Input, CardBody, CardHeader, Col, Pagination, PaginationItem, PaginationLink, Row, Table } from 'reactstrap';
+import { Button, Card, CardBody, CardHeader, CardFooter, FormGroup, Label, Input, Col, Pagination, PaginationItem, PaginationLink, Row, Table } from 'reactstrap';
 
 
 
@@ -54,13 +54,80 @@ class Transactions extends Component {
   render() {
     return (
       <div className="animated fadeIn">
-        <Row>
-        <Col xs="12" lg="4">
-              <FormGroup>
-                      <Label htmlFor="search">Search</Label>
-                      <Input type="text" name="search" id="search" />
+      <Row>
+          <Col xs="12" sm="12">
+            <Card>
+              <CardHeader>
+                <strong>Filters</strong>
+              </CardHeader>
+              <CardBody>
+                <FormGroup row className="my-0">
+                  <Col xs="2" sm="2">
+                    <FormGroup>
+                      <Label htmlFor="category">Source account</Label>
+                      <Input type="text" name="category" id="category" />
                     </FormGroup>
-                    </Col>
+                  </Col>
+                  <Col xs="2" sm="2">
+                  <FormGroup>
+                      <Label htmlFor="category">Target account</Label>
+                      <Input type="text" name="category" id="category" />
+                    </FormGroup>
+                  </Col>
+                  <Col xs="2" sm="2">
+                    <FormGroup>
+                      <Label htmlFor="group">Amount from</Label>
+                      <Input type="number" name="group" id="group" />
+                    </FormGroup>
+                  </Col>
+                  <Col xs="2" sm="2">
+                    <FormGroup>
+                      <Label htmlFor="group">Amount to</Label>
+                      <Input type="number" name="group" id="group" />
+                    </FormGroup>
+                  </Col>
+                  <Col xs="2" sm="2">
+                    <FormGroup>
+                      <Label htmlFor="group">Date from</Label>
+                      <Input type="date" name="group" id="group" />
+                    </FormGroup>
+                  </Col>
+                  <Col xs="2" sm="2">
+                    <FormGroup>
+                      <Label htmlFor="group">Date from</Label>
+                      <Input type="date" name="group" id="group" />
+                    </FormGroup>
+                  </Col>
+                </FormGroup>
+
+                {/* <FormGroup row className="my-0">
+                  <Col xs="8" sm="4">
+                    <FormGroup>
+                      <Label htmlFor="currency">Currency</Label>
+                      <Input type="select" name="select" id="currency" >
+                        <option value="0">USD</option>
+                        <option value="1">EUR</option>
+                        <option value="2">PLN</option>
+                      </Input>
+                    </FormGroup>
+                  </Col>
+                  <Col xs="4" sm="4">
+                    <FormGroup>
+                      <Label htmlFor="initial-balance">Initial balance</Label>
+                      <Input type="number" id="initial-balance" placeholder="0" />
+                    </FormGroup>
+                  </Col>
+                </FormGroup> */}
+
+              </CardBody>
+              <CardFooter>
+                <Button type="submit" size="sm" color="primary"><i className="fa fa-dot-circle-o"></i> Filter</Button>
+              </CardFooter>
+            </Card>
+          </Col>
+        </Row>
+
+        <Row>
           <Col xs="12" lg="12">
             <Card>
               <CardHeader>
